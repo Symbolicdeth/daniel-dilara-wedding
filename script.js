@@ -59,34 +59,39 @@ document.addEventListener("DOMContentLoaded", () => {
         travelRoute.style.willChange = "stroke-dashoffset";
     }
 
-    // Wedding countdown: October 24, 2026, at 6:00 PM in Istanbul.
-    // Istanbul uses UTC+03:00.
+    // Countdown to October 24, 2026, at 6:00 PM in Istanbul (UTC+03:00).
     const weddingDate = new Date("2026-10-24T18:00:00+03:00");
+    const countdown = document.getElementById("countdown");
+    const countdownMessage = document.getElementById("countdownMessage");
+    let countdownInterval;
 
     function updateCountdown() {
-        const now = new Date();
-        const remaining = weddingDate.getTime() - now.getTime();
+        const remaining = weddingDate.getTime() - Date.now();
 
         if (remaining <= 0) {
+            if (countdown) countdown.hidden = true;
+            if (countdownMessage) countdownMessage.hidden = false;
+            if (countdownInterval) window.clearInterval(countdownInterval);
             return;
         }
 
-        const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-            (remaining / (1000 * 60 * 60)) % 24
-        );
-        const minutes = Math.floor(
-            (remaining / (1000 * 60)) % 60
-        );
+        if (countdownMessage) countdownMessage.hidden = true;
+        if (!countdown) return;
 
-        const countdown = document.getElementById("countdown");
+        const totalSeconds = Math.ceil(remaining / 1000);
+        const values = {
+            days: Math.floor(totalSeconds / 86400),
+            hours: Math.floor((totalSeconds % 86400) / 3600),
+            minutes: Math.floor((totalSeconds % 3600) / 60),
+            seconds: totalSeconds % 60
+        };
 
-        if (countdown) {
-            countdown.textContent =
-                `${days} DAYS · ${hours} HOURS · ${minutes} MINUTES`;
-        }
+        Object.entries(values).forEach(([unit, value]) => {
+            const output = countdown.querySelector(`[data-countdown="${unit}"]`);
+            if (output) output.textContent = String(value).padStart(2, "0");
+        });
     }
 
     updateCountdown();
-    window.setInterval(updateCountdown, 60000);
+    countdownInterval = window.setInterval(updateCountdown, 1000);
 });
