@@ -1,4 +1,3 @@
-```javascript
 /* ========================================
    DANIEL & DILARA
    CINEMATIC WEDDING INVITATION
@@ -91,4 +90,3 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCountdown();
     window.setInterval(updateCountdown, 60000);
 });
-```
