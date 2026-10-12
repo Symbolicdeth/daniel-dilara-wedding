@@ -602,7 +602,7 @@ a:focus-visible {
     }
 
     .world-map {
-        width: 115%;
+        width: 100%;
         max-width: none;
         margin-top: 45px;
     }
