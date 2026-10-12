@@ -1,0 +1,553 @@
+```css
+/* ========================================
+   DANIEL & DILARA
+   TWO WORLDS, ONE LOVE
+   Cinematic Wedding Invitation
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+    --background: #080d19;
+    --background-light: #111b2d;
+    --gold: #e7c783;
+    --blue: #58c8ff;
+    --white: #f5f2ec;
+    --muted: #a8b0c2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+button,
+a {
+    font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 5px;
+}
+
+.invitation {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px 90px;
+    isolation: isolate;
+    background:
+        radial-gradient(
+            ellipse at 50% 45%,
+            rgba(31, 64, 105, 0.35),
+            transparent 60%
+        ),
+        linear-gradient(
+            180deg,
+            #050914 0%,
+            #0a1221 65%,
+            #080d19 100%
+        );
+}
+
+/* Atmospheric light */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            circle at 15% 25%,
+            rgba(88, 200, 255, 0.09),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 85% 55%,
+            rgba(231, 199, 131, 0.08),
+            transparent 25%
+        );
+}
+
+/* ========================================
+   STARS
+======================================== */
+
+.stars {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.stars::before,
+.stars::after {
+    content: "";
+    position: absolute;
+    inset: -50%;
+    background-image:
+        radial-gradient(1px 1px at 12% 18%, white 50%, transparent 100%),
+        radial-gradient(2px 2px at 28% 40%, #8bcfff 50%, transparent 100%),
+        radial-gradient(1px 1px at 44% 22%, white 50%, transparent 100%),
+        radial-gradient(1px 1px at 60% 60%, #e7c783 50%, transparent 100%),
+        radial-gradient(2px 2px at 77% 35%, white 50%, transparent 100%),
+        radial-gradient(1px 1px at 89% 72%, #8bcfff 50%, transparent 100%);
+    background-size: 400px 350px;
+    opacity: 0.5;
+    animation: starsDrift 90s linear infinite;
+}
+
+.stars::after {
+    background-size: 270px 290px;
+    opacity: 0.25;
+    animation-duration: 120s;
+    animation-direction: reverse;
+}
+
+@keyframes starsDrift {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(120px, 80px, 0);
+    }
+}
+
+/* ========================================
+   INTRO TEXT
+======================================== */
+
+.intro {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    animation: introReveal 1.8s ease both;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 0.66rem;
+    font-weight: 500;
+    letter-spacing: 0.34em;
+    line-height: 1.8;
+}
+
+.intro h1 {
+    margin-top: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.3rem, 9vw, 7.8rem);
+    font-weight: 300;
+    line-height: 0.95;
+    letter-spacing: 0.035em;
+}
+
+.intro h1 span {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--gold);
+}
+
+.intro-text {
+    margin-top: 27px;
+    color: var(--muted);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+    font-style: italic;
+    letter-spacing: 0.04em;
+}
+
+@keyframes introReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   BEGIN BUTTON
+======================================== */
+
+.begin-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 38px;
+    padding: 15px 23px;
+    border: 1px solid rgba(231, 199, 131, 0.55);
+    background: rgba(8, 13, 25, 0.3);
+    color: var(--white);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    cursor: pointer;
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.begin-button span {
+    color: var(--gold);
+    font-size: 1rem;
+}
+
+.begin-button:hover {
+    background: rgba(231, 199, 131, 0.1);
+    border-color: var(--gold);
+    transform: translateY(-3px);
+}
+
+/* ========================================
+   ANIMATED MAP
+======================================== */
+
+.world-map {
+    position: relative;
+    width: min(100%, 950px);
+    margin-top: 40px;
+    opacity: 0;
+    animation: mapReveal 1.8s ease 0.7s forwards;
+}
+
+.map-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.route {
+    fill: none;
+    stroke-linecap: round;
+}
+
+.route-base {
+    stroke: rgba(160, 184, 215, 0.15);
+    stroke-width: 1.5;
+    stroke-dasharray: 4 8;
+}
+
+.route-glow {
+    stroke: url(#routeGradient);
+    stroke-width: 2;
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+    filter: drop-shadow(0 0 5px rgba(88, 200, 255, 0.8));
+    transition: stroke-dashoffset 3s ease;
+}
+
+.world-map.route-active .route-glow {
+    stroke-dashoffset: 0;
+}
+
+.city-dot {
+    fill: var(--white);
+    stroke-width: 2;
+    animation: cityPulse 2.5s ease-in-out infinite;
+}
+
+.mexico-dot {
+    stroke: var(--blue);
+    filter: drop-shadow(0 0 7px var(--blue));
+}
+
+.dublin-dot {
+    stroke: #c6b4ff;
+    filter: drop-shadow(0 0 7px #c6b4ff);
+    animation-delay: 0.6s;
+}
+
+.istanbul-dot {
+    stroke: var(--gold);
+    filter: drop-shadow(0 0 9px var(--gold));
+    animation-delay: 1.2s;
+}
+
+.city-label {
+    fill: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+@keyframes cityPulse {
+    0%,
+    100% {
+        opacity: 0.65;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes mapReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   SCROLL INDICATOR
+======================================== */
+
+.scroll-hint {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--muted);
+    font-size: 0.58rem;
+    letter-spacing: 0.25em;
+    white-space: nowrap;
+    animation: hintFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes hintFloat {
+    0%,
+    100% {
+        opacity: 0.45;
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -5px);
+    }
+}
+
+/* ========================================
+   WEDDING DETAILS
+======================================== */
+
+.wedding-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 115px 24px 120px;
+    text-align: center;
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(231, 199, 131, 0.08),
+            transparent 55%
+        ),
+        var(--background);
+}
+
+.wedding-section h2 {
+    margin-top: 25px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+.ampersand {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.wedding-message {
+    margin-top: 25px;
+    color: var(--muted);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.25rem, 3vw, 1.8rem);
+    line-height: 1.7;
+}
+
+.divider {
+    width: 65px;
+    height: 1px;
+    margin: 35px 0;
+    background: var(--gold);
+}
+
+.wedding-date {
+    color: var(--gold);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    line-height: 1.8;
+}
+
+.wedding-time {
+    margin-top: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.6rem;
+    font-weight: 300;
+}
+
+.venue-name {
+    margin-top: 32px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+}
+
+.venue-city {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+}
+
+.location-button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 15px 25px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    background: transparent;
+    text-decoration: none;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.location-button:hover {
+    background: var(--gold);
+    color: var(--background);
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+    padding: 25px 20px 35px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    line-height: 2.5;
+}
+
+.footer p:first-child {
+    color: var(--gold);
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 100svh;
+        padding: 70px 18px 80px;
+    }
+
+    .eyebrow {
+        font-size: 0.55rem;
+        letter-spacing: 0.2em;
+    }
+
+    .intro h1 {
+        margin-top: 25px;
+        font-size: clamp(3rem, 13vw, 5rem);
+    }
+
+    .intro-text {
+        font-size: 1.25rem;
+        line-height: 1.5;
+    }
+
+    .begin-button {
+        margin-top: 30px;
+        padding: 14px 16px;
+        font-size: 0.58rem;
+        letter-spacing: 0.12em;
+    }
+
+    .world-map {
+        width: 115%;
+        max-width: none;
+        margin-top: 45px;
+    }
+
+    .city-label {
+        font-size: 17px;
+        letter-spacing: 2px;
+    }
+
+    .wedding-section {
+        padding: 90px 20px 95px;
+    }
+
+    .wedding-date {
+        font-size: 0.62rem;
+        letter-spacing: 0.12em;
+    }
+
+    .venue-name {
+        font-size: 1.55rem;
+    }
+}
+
+/* ========================================
+   REDUCED MOTION ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+```
