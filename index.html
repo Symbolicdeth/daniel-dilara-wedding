@@ -1,0 +1,140 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#080d19">
+    <meta name="description" content="Daniel and Dilara invite you to celebrate their wedding in Istanbul on October 24, 2026.">
+
+    <title>Daniel & Dilara | Two Worlds</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="invitation">
+
+        <section class="hero">
+
+            <div class="stars" aria-hidden="true"></div>
+
+            <div class="intro">
+                <p class="eyebrow">A JOURNEY WRITTEN IN THE STARS</p>
+
+                <h1>
+                    TWO WORLDS,<br>
+                    <span>ONE LOVE</span>
+                </h1>
+
+                <p class="intro-text">
+                    Every love story connects two worlds.
+                </p>
+
+                <button id="beginButton" class="begin-button">
+                    DISCOVER OUR STORY
+                    <span aria-hidden="true">↓</span>
+                </button>
+            </div>
+
+            <div class="world-map" id="worldMap" aria-label="An illustrated journey connecting Mexico, Dublin and Istanbul">
+
+                <svg
+                    class="map-svg"
+                    viewBox="0 0 1000 450"
+                    role="img"
+                    aria-label="A journey from Mexico to Dublin and Istanbul"
+                >
+                    <defs>
+                        <linearGradient id="routeGradient">
+                            <stop offset="0%" stop-color="#58c8ff"/>
+                            <stop offset="50%" stop-color="#c6b4ff"/>
+                            <stop offset="100%" stop-color="#e7c783"/>
+                        </linearGradient>
+                    </defs>
+
+                    <path
+                        class="route route-base"
+                        d="M 170 275 Q 330 30 475 155 T 805 130"
+                    />
+
+                    <path
+                        class="route route-glow"
+                        id="travelRoute"
+                        d="M 170 275 Q 330 30 475 155 T 805 130"
+                    />
+
+                    <circle class="city-dot mexico-dot" cx="170" cy="275" r="5"/>
+                    <circle class="city-dot dublin-dot" cx="475" cy="155" r="5"/>
+                    <circle class="city-dot istanbul-dot" cx="805" cy="130" r="5"/>
+
+                    <g class="city-label" transform="translate(170 310)">
+                        <text text-anchor="middle">MEXICO</text>
+                    </g>
+
+                    <g class="city-label" transform="translate(475 190)">
+                        <text text-anchor="middle">DUBLIN</text>
+                    </g>
+
+                    <g class="city-label" transform="translate(805 165)">
+                        <text text-anchor="middle">ISTANBUL</text>
+                    </g>
+
+                </svg>
+
+            </div>
+
+            <div class="scroll-hint" aria-hidden="true">
+                SCROLL TO EXPLORE
+            </div>
+
+        </section>
+
+        <section class="wedding-section" id="wedding">
+
+            <p class="eyebrow">THE BEGINNING OF FOREVER</p>
+
+            <h2>
+                Daniel <span class="ampersand">&</span> Dilara
+            </h2>
+
+            <p class="wedding-message">
+                Two cultures. Two journeys.<br>
+                One beautiful future.
+            </p>
+
+            <div class="divider"></div>
+
+            <p class="wedding-date">SATURDAY, OCTOBER 24, 2026</p>
+
+            <p class="wedding-time">6:00 PM</p>
+
+            <p class="venue-name">Maslak Astsubay Orduevi</p>
+
+            <p class="venue-city">Istanbul, Türkiye</p>
+
+            <a
+                class="location-button"
+                href="https://www.google.com/maps/search/?api=1&query=Maslak+Astsubay+Orduevi+Istanbul+Turkey"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                OPEN LOCATION
+            </a>
+
+        </section>
+
+        <footer class="footer">
+            <p>MADE WITH LOVE</p>
+            <p>Daniel & Dilara · 2026</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
