@@ -7,7 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-    --background: #070a1c;
+    --background: #06091b;
     --background-light: #0a1b34;
     --gold: #f9d88f;
     --blue: #55c7fc;
@@ -127,9 +127,9 @@ a:focus-visible {
 }
 
 .stars::after {
-    background-size: 270px 290px;
+    background-size: 250px 250px;
     opacity: 0.25;
-    animation-duration: 120s;
+    animation-duration: 100s;
     animation-direction: reverse;
 }
 
@@ -153,19 +153,19 @@ a:focus-visible {
     width: 100%;
     max-width: 900px;
     text-align: center;
-    animation: introReveal 1.8s ease both;
+    animation: introReveal 10s ease both;
 }
 
 .eyebrow {
     color: var(--gold);
-    font-size: 0.66rem;
+    font-size: 0.60rem;
     font-weight: 100;
     letter-spacing: 0.30em;
     line-height: 1.8;
 }
 
 .intro h1 {
-    margin-top: 20px;
+    margin-top: 30px;
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(3.3rem, 7vw, 7.8rem);
     font-weight: 300;
@@ -177,7 +177,7 @@ a:focus-visible {
     display: block;
     white-space: nowrap;
     opacity: 0;
-    transform: translateY(0.32em);
+    transform: translateY(3.32em);
     filter: blur(8px);
     letter-spacing: 0.08em;
     animation: titleLetterReveal 3s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
@@ -207,10 +207,10 @@ a:focus-visible {
     position: absolute;
     top: -40px;
     right: 1%;
-    width: clamp(40px, 6vw, 30px);
+    width: clamp(60px, 8vw, 40px);
     color: var(--white);
-    opacity: 0.2;
-    filter: drop-shadow(0 0 10px rgba(252, 158, 87, 0.861));
+    opacity: 1.2;
+    filter: drop-shadow(0 0 10px rgba(243, 126, 110, 0.861));
     animation: motifFloat 3.5s ease-in-out infinite;
 }
 
@@ -251,12 +251,12 @@ a:focus-visible {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-top: 30px;
-    padding: 8px 10px;
+    margin-top: 20px;
+    padding: 6px 8px;
     border: 1px solid rgba(154, 141, 114, 0.55);
     background: rgba(8, 17, 37, 0.3);
     color: var(--white);
-    font-size: 0.50rem;
+    font-size: 0.40rem;
     font-weight: 400;
     letter-spacing: 0.18em;
     cursor: pointer;
