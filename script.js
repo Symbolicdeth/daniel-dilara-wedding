@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
             countdownMessage.style.display = "none";
         }
 
-        document.querySelectorAll(".venue-name, .venue-city, .location-button").forEach((el) => {
+        document.querySelectorAll(".venue-name, .venue-city, .location-button:not(#postWeddingAlbumButton)").forEach((el) => {
             el.hidden = true;
             el.style.display = "none";
         });
