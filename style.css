@@ -7,17 +7,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-    --background: #080d19;
-    --background-light: #111b2d;
-    --gold: #e7c783;
-    --blue: #58c8ff;
-    --white: #f5f2ec;
-    --muted: #a8b0c2;
+    --background: #070a1c;
+    --background-light: #0a1b34;
+    --gold: #f9d88f;
+    --blue: #55c7fc;
+    --white: #f3ece0;
+    --muted: #929294;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 5;
+    padding: 10;
     box-sizing: border-box;
 }
 
@@ -28,8 +28,8 @@ html {
 body {
     background: var(--background);
     color: var(--white);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-family: 'Antarctica', sans-serif;
+    font-weight: 500;
     overflow-x: hidden;
 }
 
@@ -65,14 +65,14 @@ a:focus-visible {
     background:
         radial-gradient(
             ellipse at 50% 45%,
-            rgba(31, 64, 105, 0.35),
+            rgba(10, 18, 33, 0.35),
             transparent 60%
         ),
         linear-gradient(
             180deg,
-            #050914 0%,
-            #0a1221 65%,
-            #080d19 100%
+            #040915 0%,
+            #131e2e 65%,
+            #08172a 100%
         );
 }
 
@@ -87,12 +87,12 @@ a:focus-visible {
     background:
         radial-gradient(
             circle at 15% 25%,
-            rgba(88, 200, 255, 0.09),
+            rgba(9, 93, 134, 0.315),
             transparent 25%
         ),
         radial-gradient(
-            circle at 85% 55%,
-            rgba(231, 199, 131, 0.08),
+            circle at 90% 40%,
+            rgba(181, 163, 124, 0.184),
             transparent 25%
         );
 }
@@ -115,15 +115,15 @@ a:focus-visible {
     position: absolute;
     inset: -50%;
     background-image:
-        radial-gradient(1px 1px at 12% 18%, white 50%, transparent 100%),
-        radial-gradient(2px 2px at 28% 40%, #8bcfff 50%, transparent 100%),
-        radial-gradient(1px 1px at 44% 22%, white 50%, transparent 100%),
-        radial-gradient(1px 1px at 60% 60%, #e7c783 50%, transparent 100%),
+        radial-gradient(1px 1px at 12% 18%, rgb(255, 255, 255) 50%, transparent 100%),
+        radial-gradient(2px 2px at 28% 40%, #577ceb 50%, transparent 100%),
+        radial-gradient(1px 1px at 44% 22%, rgb(252, 239, 239) 50%, transparent 100%),
+        radial-gradient(1px 1px at 60% 60%, #dab35f 50%, transparent 100%),
         radial-gradient(2px 2px at 77% 35%, white 50%, transparent 100%),
-        radial-gradient(1px 1px at 89% 72%, #8bcfff 50%, transparent 100%);
+        radial-gradient(1px 1px at 89% 72%, #83cafc 50%, transparent 100%);
     background-size: 400px 350px;
     opacity: 0.5;
-    animation: starsDrift 90s linear infinite;
+    animation: starsDrift 19s linear infinite;
 }
 
 .stars::after {
@@ -159,15 +159,15 @@ a:focus-visible {
 .eyebrow {
     color: var(--gold);
     font-size: 0.66rem;
-    font-weight: 500;
-    letter-spacing: 0.34em;
+    font-weight: 100;
+    letter-spacing: 0.30em;
     line-height: 1.8;
 }
 
 .intro h1 {
-    margin-top: 30px;
+    margin-top: 20px;
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3.3rem, 9vw, 7.8rem);
+    font-size: clamp(3.3rem, 7vw, 7.8rem);
     font-weight: 300;
     line-height: 0.95;
     letter-spacing: 0.035em;
@@ -180,7 +180,7 @@ a:focus-visible {
     transform: translateY(0.32em);
     filter: blur(8px);
     letter-spacing: 0.08em;
-    animation: titleLetterReveal 1.35s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+    animation: titleLetterReveal 3s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
 }
 
 .intro h1 .title-line-first {
@@ -205,13 +205,13 @@ a:focus-visible {
 
 .turkish-motif {
     position: absolute;
-    top: -42px;
-    right: 7%;
-    width: clamp(42px, 6vw, 66px);
-    color: var(--gold);
+    top: -40px;
+    right: 1%;
+    width: clamp(40px, 6vw, 30px);
+    color: var(--white);
     opacity: 0.2;
-    filter: drop-shadow(0 0 10px rgba(231, 199, 131, 0.3));
-    animation: motifFloat 8s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(252, 158, 87, 0.861));
+    animation: motifFloat 3.5s ease-in-out infinite;
 }
 
 @keyframes motifFloat {
@@ -233,7 +233,7 @@ a:focus-visible {
 @keyframes introReveal {
     from {
         opacity: 0;
-        transform: translateY(25px);
+        transform: translateY(10px);
     }
 
     to {
@@ -250,20 +250,20 @@ a:focus-visible {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 18px;
-    margin-top: 38px;
-    padding: 15px 23px;
-    border: 1px solid rgba(231, 199, 131, 0.55);
-    background: rgba(8, 13, 25, 0.3);
+    gap: 10px;
+    margin-top: 30px;
+    padding: 8px 10px;
+    border: 1px solid rgba(154, 141, 114, 0.55);
+    background: rgba(8, 17, 37, 0.3);
     color: var(--white);
-    font-size: 0.65rem;
-    font-weight: 500;
+    font-size: 0.50rem;
+    font-weight: 400;
     letter-spacing: 0.18em;
     cursor: pointer;
     transition:
-        background 0.3s ease,
-        border-color 0.3s ease,
-        transform 0.3s ease;
+        background 0.5s ease,
+        border-color 0.6s ease,
+        transform 0.5s ease;
 }
 
 .begin-button span {
@@ -283,10 +283,10 @@ a:focus-visible {
 
 .world-map {
     position: relative;
-    width: min(100%, 950px);
-    margin-top: 40px;
-    opacity: 0;
-    animation: mapReveal 1.8s ease 0.7s forwards;
+    width: min(100%, 560px);
+    margin-top: 10px;
+    opacity: 5;
+    animation: mapReveal 6.8s ease 0s forwards;
 }
 
 .map-svg {
@@ -298,9 +298,9 @@ a:focus-visible {
 
 .country-outline {
     fill: none;
-    stroke: rgba(145, 174, 213, 0.34);
-    stroke-width: 1.5;
-    filter: drop-shadow(0 0 4px rgba(88, 200, 255, 0.12));
+    stroke: rgba(500, 250, 250, 0.40);
+    stroke-width: 1.2;
+    filter: drop-shadow(0 0 2px rgba(50, 196, 245, 0.12));
     vector-effect: non-scaling-stroke;
 }
 
@@ -330,8 +330,8 @@ a:focus-visible {
 
 .city-dot {
     fill: var(--white);
-    stroke-width: 2;
-    animation: cityPulse 2.5s ease-in-out infinite;
+    stroke-width: 5;
+    animation: cityPulse 10.5s ease-in-out infinite;
 }
 
 .mexico-dot {
@@ -340,13 +340,13 @@ a:focus-visible {
 }
 
 .dublin-dot {
-    stroke: #c6b4ff;
+    stroke: #a1efc2;
     filter: drop-shadow(0 0 7px #c6b4ff);
     animation-delay: 0.6s;
 }
 
 .istanbul-dot {
-    stroke: var(--gold);
+    stroke: #f4bcbc;
     filter: drop-shadow(0 0 9px var(--gold));
     animation-delay: 1.2s;
 }
