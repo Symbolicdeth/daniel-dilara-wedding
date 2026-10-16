@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
             worldMap.classList.add("route-active");
 
             beginButton.innerHTML =
-                'FOLLOW OUR JOURNEY <span aria-hidden="true">✦</span>';
+                'SEE INVITATION <span aria-hidden="true">✦</span>';
 
             beginButton.disabled = true;
 
